@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Functions Kit",
+    "description": "Функциональный набор",
+    "version": "1.0.1",
+    "icons": {
+        "128": "images/128.png"
+    },
+    "background": {
+        "scripts": ["js/background.js"]
+    },
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [{
+        "matches": ["*://vk.com/*"],
+        "js": ["js/jquery.js", "js/vk_inject.js"],
+        "css": ["css/vk_styles.css"]
+    }],
+    "browser_action": {
+        "default_title": "Functions Kit",
+        "default_icon": "images/128.png",
+        "default_popup": "popup.html"
+    }
+
+}
